@@ -12,7 +12,12 @@ const AppRoutes = () =>
   <Switch>
     {
       Menu && Menu.map( (element) => (
-        <Route exact path={element.path} component={element.component}  />
+        <Route 
+          exact 
+          path={element.path} 
+          component={element.component} 
+          key={element.title + 1} 
+        />
       ))
     }
     <Route component={PageNotFound} />
